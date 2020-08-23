@@ -1,11 +1,13 @@
 //      --- Libraries ---
-import 'package:Flutter_boilerplate_kit/Views/GetApi.dart';
+
+import 'package:Be_organized/screens/First.Page.dart';
+import 'package:Be_organized/screens/GetApi.dart';
+import 'package:Be_organized/screens/Second.Page.dart';
 import 'package:flutter/material.dart';
 import 'package:sailor/sailor.dart';
 
 //      --- V i e w s ---
-import 'package:Flutter_boilerplate_kit/Views/First.Page.dart';
-import 'package:Flutter_boilerplate_kit/Views/Second.Page.dart';
+
 
 class RouteList {
   //ToDo: Define Your Route name here

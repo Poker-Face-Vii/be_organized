@@ -1,4 +1,4 @@
-import 'package:Flutter_boilerplate_kit/Router/sailor__Router.dart';
+import 'package:Be_organized/Router/sailor__Router.dart';
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {

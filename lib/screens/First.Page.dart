@@ -1,5 +1,5 @@
-import 'package:Flutter_boilerplate_kit/Router/sailor__Router.dart';
-import 'package:Flutter_boilerplate_kit/Stores/SampleMobx.dart';
+import 'package:Be_organized/Router/sailor__Router.dart';
+import 'package:Be_organized/Stores/SampleMobx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';

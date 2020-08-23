@@ -1,7 +1,7 @@
-import 'package:Flutter_boilerplate_kit/Api/Chopper_api.dart';
-import 'package:Flutter_boilerplate_kit/Router/sailor__Router.dart';
-import 'package:Flutter_boilerplate_kit/Stores/SampleMobx.dart';
-import 'package:Flutter_boilerplate_kit/Views/Home.Page.dart';
+import 'package:Be_organized/Api/Chopper_api.dart';
+import 'package:Be_organized/Router/sailor__Router.dart';
+import 'package:Be_organized/Stores/SampleMobx.dart';
+import 'screens/Test_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
         onGenerateRoute: Routes.sailor.generator(),
         navigatorKey: Routes.sailor.navigatorKey,
-        home: HomePage(),
+        home: TestScreen(),
       ),
     );
   }

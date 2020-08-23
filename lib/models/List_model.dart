@@ -1,5 +1,5 @@
 // 1
-import 'package:Flutter_boilerplate_kit/models/Kid_model.dart';
+import 'package:Be_organized/models/Kid_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 // 2

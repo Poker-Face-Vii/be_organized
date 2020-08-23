@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:Flutter_boilerplate_kit/Api/Chopper_api.dart';
-import 'package:Flutter_boilerplate_kit/models/List_model.dart';
+import 'package:Be_organized/Api/Chopper_api.dart';
+import 'package:Be_organized/models/List_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
