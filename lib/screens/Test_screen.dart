@@ -11,7 +11,12 @@ class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          leading: Text(
+            'd',
+            style: TextStyle(fontSize: 2),
+          ),
+        ),
         body: Container(
             padding: EdgeInsets.only(top: 20),
             child: ListView(
@@ -24,8 +29,23 @@ class _TestScreenState extends State<TestScreen> {
                       color: Colors.red,
                       icon: Icons.accessible),
                 ),
-                // TaskListItem(),
-                // TaskListItem(),
+                TaskListItem(
+                  task:
+                      'go go go work like a hore bitch come on on the pool pool pool cool game on the planet earth go on the',
+                  priority: PriorityType.High,
+                  project: Project(
+                      projectTitle: 'inbox',
+                      color: Colors.red,
+                      icon: Icons.accessible),
+                ),
+                TaskListItem(
+                  task: 'go go go work like a hore bitch come on',
+                  priority: PriorityType.High,
+                  project: Project(
+                      projectTitle: 'inbox',
+                      color: Colors.red,
+                      icon: Icons.accessible),
+                ),
               ],
             )));
   }
@@ -34,7 +54,6 @@ class _TestScreenState extends State<TestScreen> {
 //! //////////////////////////////////////////////////////////////////////////
 //! ////////////////////////////////////////////////////////////////////////////
 // -- The section below shuld cute this widget is complited ------------------
-
 
 class Label {
   final String labelTitle;
@@ -74,13 +93,16 @@ class TaskListItem extends StatefulWidget {
   /// List of Task labels
   final List<Label> labels;
 
+  final doItDate;
+
   TaskListItem(
       {this.id,
       this.task,
       this.priority,
       this.isDone = false,
       this.project,
-      this.labels});
+      this.labels,
+      this.doItDate});
 
   @override
   _TaskListItemState createState() => _TaskListItemState(this.isDone);
@@ -141,17 +163,42 @@ class _TaskListItemState extends State<TaskListItem> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width - 70,
-                          child: Text(
-                            widget.task != null
-                                ? widget.task //? Task content
-                                : '',
-                            style: TextStyle(
-                                fontSize: 18,
-                                color:
-                                    this.isDone ? Colors.black38 : Colors.black,
-                                decoration: this.isDone
-                                    ? TextDecoration.lineThrough
-                                    : TextDecoration.none),
+                          child: RichText(
+                            text: TextSpan(
+                                text: widget.task != null
+                                    ? widget.task //!    Task content
+                                    : '',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: this.isDone
+                                        ? Colors.black38
+                                        : Colors.black,
+                                    decoration: this.isDone
+                                        ? TextDecoration.lineThrough
+                                        : TextDecoration.none),
+                                children: [
+                                  TextSpan(
+                                      text:
+                                          widget.doItDate != null ? ' | ' : '',
+                                      style: TextStyle(
+                                        color: Colors.red.withOpacity(.7),
+                                      )),
+                                  TextSpan(
+                                      text: widget.doItDate != null
+                                          ? widget.doItDate   // ! Date of to do 
+                                          : '',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          // shadows: [
+                                          //   Shadow(
+                                          //       blurRadius: 2.5,
+                                          //       color: Colors.black,
+                                          //       offset: Offset(.8, .8))
+                                          // ],
+                                          letterSpacing: 2,
+                                          color: Colors.red.withOpacity(.7),
+                                          fontSize: 12))
+                                ]),
                           ),
                         ),
                       ],

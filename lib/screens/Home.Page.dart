@@ -1,10 +1,14 @@
 import 'package:Be_organized/Router/sailor__Router.dart';
 
 import 'package:flutter/material.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('Home'),),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home'),
+      ),
       body: Container(
         child: Center(
           child: SingleChildScrollView(
@@ -12,12 +16,12 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 FlatButton(
                     onPressed: () {
-                      Routes.sailor.navigate(Routes.routeList.firstPage );
+                      Routes.sailor.navigate(Routes.routeList.firstPage);
                     },
                     child: Text('HomePage')),
                 FlatButton(
                     onPressed: () {
-                      Routes.sailor.navigate(Routes.routeList.apiPage );
+                      Routes.sailor.navigate(Routes.routeList.apiPage);
                     },
                     child: Text('Get Api')),
               ],
